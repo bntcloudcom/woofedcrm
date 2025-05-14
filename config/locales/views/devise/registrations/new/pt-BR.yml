@@ -1,0 +1,11 @@
+pt-BR:
+  views:
+    devise:
+      registrations:
+        new:
+          register: Cadastrar
+          company: Empresa
+          url_company: Site da empresa
+          password_minimum_characters: '(Mínimo de %{characters} caracteres)'
+
+

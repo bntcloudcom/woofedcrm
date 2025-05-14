@@ -1,0 +1,36 @@
+<button  data-action="click->element-expanded#toggle" class="w-full relative min-[1400px]:hidden flex flex-1 items-center h-10 pr-3 border-2 rounded-lg bg-light-palette-p5 border-light-palette-p3 hover:border-light-palette-p2" type="button">
+  <div class="p-2  border-r-2 border-r-light-palette-p3 rounded-l-md">
+    <i data-lucide="chevron-right" style="color: #605E70" ></i>
+  </div>
+  <p class="m-0 typography-body-s-lh150 text-dark-gray-palette-p1 mx-2 text-center">
+    <%= t('views.accounts.deals.details.information') %>
+  </p>
+  <p class=" m-0 items-center text-center whitespace-nowrap truncate pl-2 typography-subtext-m-lh150 text-dark-gray-palette-p3 before:bg-light-palette-p3 before:absolute before:rounded-full before:left-[147px] before:h-7 before:w-0.5">
+    <%= t('views.accounts.deals.details.info_examples') %>
+  </p>
+</button>
+<div id="element-expand" aria-expanded="false" data-accordion="open" class="w-8/12 min-[1400px]:w-full absolute min-[1400px]:static top-0 aria-expanded:left-0 left-[-931px] z-[60] ease-in duration-300 shadow-[0px_10px_10px_0px_rgba(96,94,112,0.15)] min-[1400px]:shadow-none">
+  <div id="accordion-arrow-icon">
+    <div class="flex min-[1400px]:hidden items-center justify-between py-3 px-4 bg-light-palette-p5 border-x-2 border-light-palette-p3">
+      <h5 class="typography-body-s-lh150 text-dark-gray-palette-p1">
+        <%= t('views.accounts.deals.details.information') %>
+      </h5>
+      <button data-action="click->element-expanded#toggle" type="button" class="flex items-center h-8 p-1 text-dark-gray-palette-p3 border-[1.5px] border-[#e5e7eb00] hover:border-brand-palette-06 hover:border-[1.5px] hover:bg-brand-palette-08 hover:rounded-md hover:text-brand-palette-03 transtion ease-in-out delay-250">
+        <i data-lucide="x"></i>
+        <span class="sr-only">Close menu</span>
+      </button>
+    </div>
+    <div class="bg-light-palette-p5 min-[1400px]:rounded-t-md border-2 border-light-palette-p3 px-4">
+      <%= render "/accounts/deals/details/show", model: @deal, edit_path: edit_account_deal_path(current_user.account, @deal)%>
+    </div>
+    <div class="bg-light-palette-p5 border-x-2 border-b-2 border-light-palette-p3 px-4">
+      <%= render "/accounts/deals/details/show", model: @deal.contact, edit_path: edit_account_contact_path(current_user.account, @deal.contact) %>
+    </div>
+    <div class="bg-light-palette-p5 border-x-2 border-b-2 border-light-palette-p3 px-4">
+      <%= render '/accounts/deals/details/deal_products/show', deal: @deal %>
+    </div>
+    <div class="bg-light-palette-p5 min-[1400px]:rounded-b-md border-x-2 border-b-2 border-light-palette-p3 px-4">
+      <%= render '/accounts/deals/details/deal_assignees/show', deal: @deal %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+pt-BR:
+  views:
+    devise:
+      sessions:
+        new:
+          log_in: "Entrar"
+          forgot_password: "Esqueceu sua senha?"
+          account_answer: "Não possui conta?"
+          create_account: "Criar conta"
+          start_installation: 'Iniciar instalação'

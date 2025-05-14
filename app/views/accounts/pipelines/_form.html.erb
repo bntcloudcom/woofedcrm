@@ -1,0 +1,35 @@
+<%= form_with(model: pipeline, url: pipeline.persisted? ? account_pipeline_path(Current.account, pipeline) : account_pipelines_path(Current.account), class: "flex flex-col gap-5") do |form| %>
+  <% if pipeline.errors.any? %>
+    <div>
+      <ul>
+        <% pipeline.errors.each do |error| %>
+          <li class="typography-body-s-lh150 text-auxiliary-palette-red"><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <h2 class= "typography-body-s-lh150 text-dark-gray-palette-p1">
+    <%= t('views.accounts.pipelines.form.pipeline_data') %>
+  </h2>
+  <div class= "grid">
+    <div class="flex flex-col gap-1">
+      <%= form.label :name, class: "typography-text-m-lh150 text-dark-gray-palette-p1" %>
+      <%= form.text_field :name, class: 'form-input' %>
+    </div>
+  </div>
+  <div class="h-0.5 w-full bg-light-palette-p3"></div>
+  <h2 class= "typography-body-s-lh150 text-dark-gray-palette-p1">
+    <%= t('activerecord.models.stage.other') %>
+  </h2>
+  <div class="grid gap-5" data-controller="drag-stages-position" <%= "data-drag-stages-position-url= #{account_pipeline_path(pipeline)}" if pipeline.id.present?%>  >
+    <%= form.fields_for :stages, @stages do |stage| %>
+      <div data-id= "<%= stage.object.id %>">
+        <%= render 'stage_fields', :f => stage %>
+      </div>
+    <% end %>
+  </div>
+  <div class="flex gap-2 self-end mt-5">
+    <%= link_to_add_association t('activerecord.models.stage.new'), form, :stages, class: "btn-secondary"%>
+    <%= form.submit  class: 'btn-primary self-end cursor-pointer' %>
+  </div>
+<% end %>

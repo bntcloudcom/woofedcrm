@@ -1,0 +1,29 @@
+<div class="col-12">
+  <div>
+    <header class="text-center m-3">
+      <span class="badge badge-light">Planned</span>
+    </header>
+    <div class="activities">
+      <% events.to_do.each do | event | %>
+        <%= render "/accounts/deals/events/event", event: event %>
+      <% end %>
+    </div>
+  </div>
+
+  <div>
+    <header class="text-center m-3">
+      <span class="badge badge-light">Done</span>
+    </header>
+    <div class="activities">
+      <% events.each do | event | %>
+        <%= render "/accounts/deals/events/event", event: event %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="row float-right p-3">
+  <div class="col-12 mr-5">
+    <%== pagy_nav(@pagy) %>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+{
+  "name": "woofed-crm",
+  "private": true,
+  "scripts": {
+    "build": "yarn install",
+    "heroku-prebuild": "yarn build"
+  },
+  "dependencies": {
+    "@hotwired/turbo-rails": "^8.0.12",
+    "@nathanvda/cocoon": "^1.2.14",
+    "@rails/actioncable": "^7.1.501",
+    "@rails/actiontext": "^7.1.501",
+    "@rails/activestorage": "^7.1.501",
+    "@rails/request.js": "^0.0.8",
+    "@rails/ujs": "^7.1.501",
+    "@rails/webpacker": "5.4.2",
+    "@yaireo/tagify": "^4.17.9",
+    "bootstrap-daterangepicker": "^3.1.0",
+    "debounce": "^1.2.1",
+    "flowbite": "3.1.1",
+    "imask": "^7.1.3",
+    "lucide": "0.503.0",
+    "motion": "^10.16.2",
+    "sortablejs": "^1.15.0",
+    "stimulus": "^2.0.0",
+    "stimulus-lightbox": "2.0.0",
+    "stimulus-notification": "1.0.0",
+    "trix": "^1.2.0",
+    "turbolinks": "^5.2.0",
+    "wavesurfer.js": "^7.7.3",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "3.11.2"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "@webpack-cli/serve": "^1.5.2",
+    "localtunnel": "^2.0.2"
+  }
+}

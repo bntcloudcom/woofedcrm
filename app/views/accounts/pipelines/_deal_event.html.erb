@@ -1,0 +1,19 @@
+<% if event.overdue? %>
+  <div class='inline-flex gap-1 items-center color-fg-feedback-danger h-5'>
+    <div class='w-4 h-4'>
+      <i data-lucide="clock-4" class="w-4 h-4"></i>
+    </div>
+    <span class='typography-body-800'>
+      <%= event.scheduled_at_format_distance %>
+    </span>
+  </div>
+<% else %>
+  <div class='inline-flex gap-1 items-center color-fg-feedback-success h-5'>
+    <div class='w-4 h-4'>
+      <i data-lucide="clock-4" class="w-4 h-4"></i>
+    </div>
+    <span class='typography-body-800'>
+      <%= event.scheduled_at_format_distance %>
+    </span>
+  </div>
+<% end %>
