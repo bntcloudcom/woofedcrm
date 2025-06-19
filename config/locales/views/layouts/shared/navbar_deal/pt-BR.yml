@@ -1,0 +1,14 @@
+pt-BR:
+  views:
+    layouts:
+      shared:
+        navbar_deal:
+          delete: 'Excluir'
+          lost: 'Perdido'
+          won: 'Ganho'
+          deal_lost: 'Negócio perdido'
+          deal_won: 'Negócio ganho'
+          are_you_sure?: 'Você tem certeza?'
+          reopen: 'Reabrir'
+
+

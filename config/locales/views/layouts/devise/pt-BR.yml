@@ -1,0 +1,19 @@
+pt-BR:
+  views:
+    layouts:
+      devise:
+        cellphone_title: ""
+        cellphone_list_easy: ""
+        cellphone_list_simple: ""
+        cellphone_list_efficient: ""
+        cellphone_tagline: ""
+        new_leads_generated: ""
+        new_lead: ""
+        mastery: ""
+        sales_funnel: "Funil de Vendas"
+        reminder: "Lembrete"
+        crm_help: ""
+        lead_management: "Gestão de Leads"
+        new_lead_arrival: "🎉 Um novo Lead acabou de chegar"
+        new_client: "Novo Cliente"
+        ceo_founder: "CEO/Fundador"

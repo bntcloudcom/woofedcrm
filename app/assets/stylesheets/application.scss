@@ -1,0 +1,87 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Philosopher:wght@700&display=swap');
+@import "./actiontext.scss";
+@import "./commons/w-btn-outline.scss";
+@import "./commons/w-btn-block.scss";
+@import '@yaireo/tagify/dist/tagify.css';
+@import "lightgallery.js/dist/css/lightgallery.css";
+
+input[type=file]::file-selector-button {
+  background-color: #FAF9FD;
+  color: #888599
+}
+input[type=file]:hover::file-selector-button {
+  background-color: #EDF1FD;
+  color: #6857D9
+}
+
+.btn-remove {
+	font-size: 12px;
+	border-radius: 30px;
+	padding-left: 13px;
+	padding-right: 13px;
+  padding: 2px 15px;
+  box-shadow: 0 2px 6px #fd9b96;
+  background-color: #fc544b;
+  border-color: #fc544b;
+  color: #fff;
+  max-height: 30px;
+  margin-left: 15px;
+}
+
+.trix-content{
+  font-weight: 500;
+  font-size: .938rem;
+  line-height: 200%;
+  color: #888599;
+  overflow-wrap: break-word;
+}
+
+.embed {
+  .main-content {
+    padding-top: 0px !important;
+  }
+  background-color: #F6F8FE;
+}
+
+// event icons styles
+.message-circle{
+  height: 15px;
+  width: 15px;
+  stroke: #369EF2;
+  transform: rotate(-101deg);
+}
+.clipboard-list, .menu-square{
+  height: 14px;
+  width: 14px;
+  stroke: #7161DB;
+}
+
+// css scroll bar style
+
+/* width */
+.custom-scroll-list-deal::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.custom-scroll-list-deal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.custom-scroll-list-deal::-webkit-scrollbar-thumb {
+  background: #F2F1F7;
+  border-left: 5px white solid;
+}
+
+/* Handle on hover */
+.custom-scroll-list-deal::-webkit-scrollbar-thumb:hover {
+  background: #CBC8DB;
+}
+
+/* Handle elements visibility when card is dragging on kanban */
+body.is-dragging [data-tooltip-target],
+body.is-dragging [data-popover-target] {
+  pointer-events: none !important;
+}

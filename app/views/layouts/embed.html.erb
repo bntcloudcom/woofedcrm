@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>CRM</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= action_cable_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", media: 'all', "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application', defer: true, 'data-turbo-track': 'reload' %>
+    <%= render "layouts/shared/analytics_scripts" %>
+    <%= yield :stylesheets %>
+  </head>
+  <body class="bg-brand-palette-08">
+    <%= render partial: 'components/flash_message', locals: { message: flash[:notice] } %>
+    <%= content_for?(:content) ? yield(:content) : yield %>
+    <%= yield :javascripts %>
+  </body>
+</html>

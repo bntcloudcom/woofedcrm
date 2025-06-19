@@ -1,0 +1,34 @@
+<%= turbo_frame_tag @deal_product do %>
+  <%= form_with(model: @deal_product, url: account_deal_products_path) do |form| %>
+    <%= form.hidden_field :deal_id %>
+    <div class="flex items-center py-4 justify-between">
+      <div class="flex items-center gap-2 text-dark-gray-palette-p1">
+        <i data-lucide='box' class='w-5 h-5 stroke-1.04'></i>
+        <p class="typography-body-s-lh150">
+          <%= t('activerecord.models.product.other') %>
+        </p>
+      </div>
+      <div class='flex gap-2'>
+        <%= form.submit t('activerecord.models.product.add'), class: "select-search-submit-button button-default-blank-secondary-sm hidden" %>
+        <%= link_to :back, class: 'button-default-blank-secondary-icon-only-sm' do %>
+          <i data-lucide="x"></i>
+        <% end %>
+      </div>
+    </div>
+    <% if @deal_product.errors.any? %>
+      <div class='mb-4'>
+        <ul>
+          <% @deal_product.errors.each do |error| %>
+            <li class="typography-body-s-lh150 text-auxiliary-palette-red"><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class='mb-2.5'>
+      <%= turbo_frame_tag :select_product_search,
+        src: select_product_search_account_products_path(current_user.account, form_name: form.field_name(:product_id)), class: "flex-1 relative h-8" do %>
+        <%= render 'components/loading' %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

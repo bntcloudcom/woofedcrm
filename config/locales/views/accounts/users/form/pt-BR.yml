@@ -1,0 +1,15 @@
+pt-BR:
+  views:
+    accounts:
+      users:
+        form:
+          user_data: 'Dados do usuário'
+          access_token: 'Token de acesso'
+          access_token_info: "Este token pode ser utilizado ao configurar uma integração baseada em API."
+          copy: 'Copiar'
+          copied: 'Copiado'
+          push_notification_btn: 'Ativar notificações push'
+          push_notification_activate_message: 'Você ativou push para este navegador.'
+          notifications: 'Notificações'
+
+

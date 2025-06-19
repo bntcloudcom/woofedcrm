@@ -1,0 +1,26 @@
+pt-BR:
+  activerecord:
+    models:
+      contact:
+        one: Contato
+        other: Contatos
+        new: Novo contato
+        edit: Editar contato
+        unknown: Contato desconhecido
+    attributes:
+      contact:
+        full_name: Nome completo
+        phone: Telefone (celular)
+        email: Email
+        label_list: Etiquetas
+        chatwoot_conversations_label_list: Etiquetas de conversas no CRM
+        id: "Código do contato"
+        custom_attributes: Atributos Personalizados
+        created_at: Criado em
+        updated_at: Atualizado em
+    errors:
+      contact:
+        email:
+          invalid: é inválido
+        phone:
+          invalid: deve estar no formato e164

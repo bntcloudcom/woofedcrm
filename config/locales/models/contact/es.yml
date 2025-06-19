@@ -1,0 +1,26 @@
+es:
+  activerecord:
+    models:
+      contact:
+        one: Contacto
+        other: Contactos
+        new: Nuevo contacto
+        edit: Editar contacto
+        unknown: Contacto desconocido
+    attributes:
+      contact:
+        full_name: Nombre completo
+        phone: Teléfono (celular)
+        email: Correo electrónico
+        label_list: Etiquetas
+        chatwoot_conversations_label_list: Etiquetas de conversaciones en Chatwoot
+        id: "Código de contacto"
+        created_at: Creado en
+        updated_at: Actualizado en
+        custom_attributes: Atributos Personalizados
+    errors:
+      contact:
+        email:
+          invalid: es inválido
+        phone:
+          invalid: debe estar en el formato e164
