@@ -2,6 +2,6 @@ pt-BR:
   views:
     installation:
       new:
-        join_crm: "Junte-se ao %{crm_name}"
-        step_away_from_growth: "Você está a um passo da sua empresa crescer."
+        join_crm: "Bem-Vindo(a) ao CRM"
+        step_away_from_growth: ""
         login_with_provider: "Faça login com %{provider}"

@@ -4,4 +4,4 @@ pt-BR:
       contacts:
         chatwoot_embeded:
           form:
-            contact_not_found: 'Esse contato não existe no(a) %{crm_name}. Deseja criar?'
+            contact_not_found: 'Esse contato não existe no(a) CRM. Deseja criar?'
